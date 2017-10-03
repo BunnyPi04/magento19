@@ -1,0 +1,7 @@
+<layout version="1.0">
+    <adminhtml_film_index>
+        <reference name="content">
+            <block type="pfay_films/adminhtml_films_grid" name="monblock"/>
+        </reference>
+    </adminhtml_film_index>
+</layout>

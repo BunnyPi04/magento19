@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Magebase_Grid>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Magebase_Grid>
+    </modules>
+</config>

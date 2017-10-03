@@ -1,0 +1,20 @@
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <pfay translate="title">
+                    <title>My Menu</title>
+                    <sort_order>100</sort_order>
+                    <children>
+                        <films translate="title">
+                            <title>Films</title>
+                            <sort_order>0</sort_order>
+                        </films>
+                    </children>
+                </pfay>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

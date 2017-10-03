@@ -1,0 +1,7 @@
+
+<?xml version="1.0"?>
+<adminhtml_cashier_index>
+    <reference name="content">
+        <block type="cashier/adminhtml_cashier_cashier" name="cashier"/>
+    </reference>
+</adminhtml_cashier_index>

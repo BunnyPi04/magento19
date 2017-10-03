@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <!--Version của module-->
+        <Magebase_Grid>
+            <version>0.1.0</version>
+        </Magebase_Grid>
+    </modules>
+    <!--Khai báo admin router-->
+    <admin>
+        <routers>
+            <gridadmin>
+                <use>admin</use>
+                <args>
+                    <module>Magebase_Grid</module>
+                    <frontName>grid</frontName>
+                </args>
+            </gridadmin>
+        </routers>
+    </admin>
+    <adminhtml>
+        <!-- Khai báo file layout trong admin-->
+        <layout>
+            <updates>
+                <grid>
+                    <file>grid.xml</file>
+                </grid>
+            </updates>
+        </layout>
+    </adminhtml>
+    <global>
+        <!--Khai báo model, resource model-->
+        <models>
+            <grif>
+                <class>Magebase_Grid_Model</class>
+                <resourceModel>salestaff_mysql4</resourceModel>
+            </grif>
+            <salestaff_mysql4>
+                <class>Basetut_Salestaff_Model_Mysql4</class>
+                <entities>
+                    <staff>
+                        <table>salestaff_staff</table>
+                    </staff>
+                </entities>
+            </salestaff_mysql4>
+        </models>
+        <!--Khai báo resource để connect và thao tác với database được-->
+        <resources>
+            <salestaff_setup>
+                <setup>
+                    <module>Basetut_Salestaff</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </salestaff_setup>
+            <salestaff_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </salestaff_write>
+            <salestaff_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </salestaff_read>
+        </resources>
+        <!--Khai báo block để có thể dùng được-->
+        <blocks>
+            <salestaff>
+                <class>Basetut_Salestaff_Block</class>
+            </salestaff>
+        </blocks>
+        <!--Khai báo helper-->
+        <helpers>
+            <salestaff>
+                <class>Basetut_Salestaff_Helper</class>
+            </salestaff>
+        </helpers>
+    </global>
+
+</config>

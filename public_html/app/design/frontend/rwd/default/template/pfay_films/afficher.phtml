@@ -1,0 +1,16 @@
+<h1>Mon block</h1>
+<?php echo $this->methodblock(); ?>
+
+<form action="<?php echo Mage::getUrl('films/index/save') ?>" method="post">
+    <fieldset>
+        <ul>
+            <li>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name"/>
+            </li>
+            <li>
+                <input type="submit" value="Enter value"/>
+            </li>
+        </ul>
+    </fieldset>
+</form>
