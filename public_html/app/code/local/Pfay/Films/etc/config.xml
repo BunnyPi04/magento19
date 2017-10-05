@@ -26,13 +26,13 @@
 <!-- 2/10 -->
     <admin>
         <routers>
-            <films>
-                <use>admin</use>
+            <adminhtml>
                 <args>
-                    <modules>Pfay_Films</modules>
-                    <frontName>adminfilms</frontName>
+                    <modules>
+                        <films before="Mage_Adminhtml">Pfay_Films_Adminhtml</films>
+                    </modules>
                 </args>
-            </films>
+            </adminhtml>
         </routers>
     </admin>
     <adminhtml>
@@ -43,19 +43,6 @@
                 </pfay_films>
             </updates>
         </layout>
-        <menu>
-            <pfay translate="title" module="pfay_films">
-                <title>My Menu</title>
-                <sort_order>100</sort_order>
-                <children>
-                    <films translate="title" module="pfay_films">
-                        <title>Films</title>
-                        <sort_order>0</sort_order>
-                        <action>adminfilms/adminhtml_index</action>
-                    </films>
-                </children>
-            </pfay>
-        </menu>
     </adminhtml>
 <!-- -->
 
