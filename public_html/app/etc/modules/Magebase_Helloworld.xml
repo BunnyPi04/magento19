@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Magebase_Helloworld>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Magebase_Helloworld>
+    </modules>
+</config>
