@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+    <frontend>
+        <routers>
+            <checkoutd>
+                <use>standard</use>
+                <args>
+                    <module>Magebase_Checkoutd</module>
+                    <frontName>checkoutd</frontName>
+                </args>
+            </checkoutd>
+        </routers>
+        <layout>
+            <updates>
+                <checkoutd>
+                    <file>checkoutd.xml</file>
+                </checkoutd>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <checkoutd>
+                <rewrite>
+                    <onepage>Excellence_Remove_Block_Onepage</onepage>
+                </rewrite>
+            </checkoutd>
+        </blocks>
+        <helpers>
+            <checkoutd>
+                <class>Magebase_Checkoutd_Helper</class>
+            </checkoutd>
+        </helpers>
+
+    </global>
+</config>

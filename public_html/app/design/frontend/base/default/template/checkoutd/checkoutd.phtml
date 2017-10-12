@@ -1,0 +1,34 @@
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/removecheckout.js') ?>">
+    var Excellence = Class.create(Checkout, {
+        initialize: function($super,accordion, urls){
+            $super(accordion, urls);
+            //New Code Addded
+            this.steps = ['billing', 'shipping', 'shipping_method', 'payment', 'review'];
+        },
+        setMethodGuest: function(){
+            Element.hide('register-customer-password');
+        },
+        setMethodRegister: function(){
+            Element.show('register-customer-password');
+        }
+    });
+    //<![CDATA[
+    var accordion = new Accordion('checkoutSteps', '.step-title', true);
+    <?php if($this->getActiveStep()): ?>
+    accordion.openSection('opc-<?php echo $this->getActiveStep() ?>');
+    <?php endif ?>
+    //New Code Added Below
+    var checkout = new Excellence(accordion,{
+        progress: '<?php echo $this->getUrl('checkout/onepage/progress') ?>',
+        review: '<?php echo $this->getUrl('checkout/onepage/review') ?>',
+        saveMethod: '<?php echo $this->getUrl('checkout/onepage/saveMethod') ?>',
+        failure: '<?php echo $this->getUrl('checkout/cart') ?>'}
+    );
+    //If Guest Method Checkout
+    checkout.setMethodGuest();
+
+    //If Register Method Checkout,uncomment code below
+    //checkout.setMethodRegister();
+    //]]>
+
+</script>
